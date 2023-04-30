@@ -1,0 +1,39 @@
+{
+    "name": "lar/tagable",
+    "description": "Laravel Application React Tag",
+    "type": "lar-library",
+    "keywords": ["laravel", "application", "react", "tag"],
+    "homepage": "https://bitbucket.org/lar-repo/tagable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "xsaven",
+            "email": "dev.xsaven@gmail.com"
+        }
+    ],
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.1.0",
+        "intervention/image": "*"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "Lar\\Tagable\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lar\\Tagable\\ServiceProvider"
+            ],
+            "aliases": {
+                "Tag": "Lar\\Tagable\\Facade"
+            }
+
+        }
+    }
+}
