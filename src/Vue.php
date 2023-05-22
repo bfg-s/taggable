@@ -4,6 +4,7 @@ namespace Lar\Tagable;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use Lar\Layout\Abstracts\Component;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
 /**
@@ -64,7 +65,7 @@ class Vue extends Component
             $id = Str::slug($this->handler_name, '_').($num ? '_'.$num : '');
         }
 
-        $route = \Route::currentRouteName() ?? 'components';
+        $route = Route::currentRouteName() ?? 'components';
 
         if ($id) {
             $this->setName($id);
